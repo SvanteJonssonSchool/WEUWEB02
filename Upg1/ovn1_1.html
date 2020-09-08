@@ -1,0 +1,41 @@
+<!-- https://github.com/datorklubben/Spelprogrammering-med-JavaScript-och-Canvas -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script src="simple.js">
+         function start(){
+                rectangle(0,50, 100000,2,"black")
+                rectangle(50,50, 100,100,"blue")
+                circle(250, 50, 50, "yellow")
+                triangle(350, 50, 350, 150, 450, 50, "green");
+                ring(550, 50, 50, 8, "red")
+
+                //face
+                circle(250, 350, 100, "yellow")
+                rectangle(200, 325, 20,2,"black")
+                rectangle(280, 325, 20,2,"black")
+                circle(210, 340, 6, "black")
+                circle(290, 340, 6, "black")
+                rectangle(250, 350, 2,30,"black")
+                line(210, 380, 250, 400, 2, "black")
+                line(290, 380, 250, 400, 2, "black")
+                //body + arms
+                rectangle(200, 450, 100, 150, "blue")
+                line(200, 450, 175, 575, 4, "red")
+                line(300, 450, 325, 575, 4, "red")
+                //legs + feet
+                line(205, 600, 205, 700, 10, "black")
+                line(295, 600, 295, 700, 10, "black")
+                line(205, 695, 190, 695, 10, "black")
+                line(295, 695, 310, 695, 10, "black")
+
+
+         }
+      </script>
+</body>
+</html>
