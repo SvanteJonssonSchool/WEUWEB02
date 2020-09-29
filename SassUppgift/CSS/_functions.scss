@@ -1,0 +1,12 @@
+@import "./variables";
+
+
+@mixin linear_gradient($firstColor, $secondColor, $thirdColor) {
+    background: linear-gradient(90deg, $firstColor 0%, $secondColor 50%, $thirdColor 100%);
+
+}
+
+@mixin headerText{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}

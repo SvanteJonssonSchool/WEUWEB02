@@ -1,0 +1,3 @@
+@mixin linear_gradient($firstColor, $secondColor, $thirdColor) {
+    background: linear-gradient(90deg, $firstColor 0%, $secondColor 50%, $thirdColor 100%);
+}

@@ -1,0 +1,7 @@
+@import '_functions';
+
+.box{
+    width: 100vw;
+    height: 100vh;
+    @include linear_gradient(red, green, blue);
+}
