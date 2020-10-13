@@ -1,5 +1,14 @@
-@import './_colors';
+@import './_variables';
 
-@mixin name {
-    
+@mixin widthAndHeight($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin linkApperance() {
+    text-decoration: none;
+    &:hover{
+        color: green;
+        text-shadow: 0px 0px 10px #888585d3;
+    }
 }

@@ -1,26 +1,40 @@
-@import './_colors';
-
+@import './_variables';
+@import './functions';
 *{
     margin: 0;
     box-sizing: border-box;    
 }
 header{
-    width: 100%;
-    height: 20vh;
-    background-color: $SecondaryColor;
+    @include widthAndHeight(100%, 10vh);
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: $font_size_header;
+    font-family: $main_font;
+    p{
+        margin-left: 2%;
+        margin-right: auto;
+        @include widthAndHeight(auto, auto);
+    }
+    a{
+        margin-right: 2%;
+        @include widthAndHeight(auto, auto);
+        @include linkApperance();
+    }
+    :last-child{
+        margin-right: 10%;
+    }
 }
 #mainContent{
-    width: 100%;
-    height: 65vh;
+    @include widthAndHeight(100%, 65vh);
     background-color: $SecondaryColor;
 }
 #aboutUs{
-    width: 100%;
-    height: 60vh;
+    @include widthAndHeight(100%, 60vh);
     background-color: $MainColor;
 }
 footer{
-    width: 100%;
-    height: 40vh;
+    @include widthAndHeight(100%, 40vh);
     background-color: greenyellow;
 }
