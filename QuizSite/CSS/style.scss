@@ -1,5 +1,6 @@
 @import './_variables';
 @import './functions';
+@import './animations';
 *{
     margin: 0;
     box-sizing: border-box;    
@@ -23,12 +24,41 @@ header{
         @include linkApperance();
     }
     :last-child{
-        margin-right: 10%;
+        margin-right: 2%;
     }
 }
 #mainContent{
     @include widthAndHeight(100%, 65vh);
     background-color: $SecondaryColor;
+    font-family: $main_font;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1{
+        margin-bottom: 25px;
+    }
+    p{
+        margin-bottom: 25px;
+    }
+    a{
+        color: #ffffffff;
+        background: linear-gradient(270deg, #ca00ff, #ff0000);
+        background-size: 400% 400%;
+        animation: AnimationName 10s ease infinite;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50px;
+        width: 400px;
+        height: auto;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    @keyframes AnimationName {
+        0%{background-position:50% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:50% 0%}
+    }
 }
 #aboutUs{
     @include widthAndHeight(100%, 60vh);
