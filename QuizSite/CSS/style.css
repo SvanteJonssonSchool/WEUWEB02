@@ -1,24 +1,23 @@
-@-webkit-keyframes AnimationName {
+/*
+@keyframes backgroundShift {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}*/
+@-webkit-keyframes test {
   0% {
-    background-position: 50% 0%;
+    background-color: palegreen;
   }
   50% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
+    background-color: orchid;
   }
 }
-
-@keyframes AnimationName {
+@keyframes test {
   0% {
-    background-position: 50% 0%;
+    background-color: palegreen;
   }
   50% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
+    background-color: orchid;
   }
 }
 
@@ -26,6 +25,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -70,8 +70,8 @@ header :last-child {
 
 #mainContent {
   width: 100%;
-  height: 65vh;
-  background-color: #FFFFFF;
+  height: 90vh;
+  background-color: black;
   font-family: "Roboto", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,23 +86,22 @@ header :last-child {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: white;
 }
 
 #mainContent h1 {
-  margin-bottom: 25px;
+  margin-bottom: 60px;
+  font-size: 70px;
 }
 
 #mainContent p {
-  margin-bottom: 25px;
+  font-size: 35px;
+  margin-bottom: 60px;
 }
 
 #mainContent a {
+  font-size: 30px;
   color: #ffffffff;
-  background: -webkit-gradient(linear, right top, left top, from(#ca00ff), to(#ff0000));
-  background: linear-gradient(270deg, #ca00ff, #ff0000);
-  background-size: 400% 400%;
-  -webkit-animation: AnimationName 10s ease infinite;
-          animation: AnimationName 10s ease infinite;
   text-align: center;
   text-decoration: none;
   border-radius: 50px;
@@ -110,29 +109,87 @@ header :last-child {
   height: auto;
   padding-top: 25px;
   padding-bottom: 25px;
+  background: -webkit-gradient(linear, right top, left top, from(#ff6622), to(#ff27e9));
+  background: linear-gradient(270deg, #ff6622, #ff27e9);
+  background-size: 200% 200%;
+  -webkit-animation-name: backgroundShift;
+          animation-name: backgroundShift;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-@keyframes AnimationName {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
+#mainContent a:hover {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#mainContent a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 #aboutUs {
   width: 100%;
-  height: 60vh;
-  background-color: #000000;
+  height: 80vh;
+  background-color: white;
+  color: black;
+}
+
+#aboutUs h1 {
+  font-size: 100px;
+  width: auto;
+  height: auto;
+  padding-top: 2%;
+  margin-left: 2%;
+}
+
+#aboutUs p {
+  font-size: 18px;
+  margin: 10%;
+  margin-top: 8%;
+  width: 80%;
+  height: auto;
 }
 
 footer {
   width: 100%;
-  height: 40vh;
+  height: 20vh;
   background-color: greenyellow;
+}
+
+@-webkit-keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

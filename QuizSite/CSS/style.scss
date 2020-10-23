@@ -1,9 +1,10 @@
 @import './_variables';
-@import './functions';
-@import './animations';
+@import './_functions';
+@import './_animations';
 *{
     margin: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 header{
     @include widthAndHeight(100%, 10vh);
@@ -28,24 +29,25 @@ header{
     }
 }
 #mainContent{
-    @include widthAndHeight(100%, 65vh);
-    background-color: $SecondaryColor;
+    @include widthAndHeight(100%, 90vh);
+    background-color: black;
     font-family: $main_font;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: white;
     h1{
-        margin-bottom: 25px;
+        margin-bottom: 60px;
+        font-size: 70px;
     }
     p{
-        margin-bottom: 25px;
+        font-size: 35px;
+        margin-bottom: 60px;
     }
     a{
+        font-size: 30px;
         color: #ffffffff;
-        background: linear-gradient(270deg, #ca00ff, #ff0000);
-        background-size: 400% 400%;
-        animation: AnimationName 10s ease infinite;
         text-align: center;
         text-decoration: none;
         border-radius: 50px;
@@ -53,18 +55,50 @@ header{
         height: auto;
         padding-top: 25px;
         padding-bottom: 25px;
-    }
-    @keyframes AnimationName {
-        0%{background-position:50% 0%}
-        50%{background-position:50% 100%}
-        100%{background-position:50% 0%}
+        background: linear-gradient(270deg, #ff6622, #ff27e9);
+        background-size: 200% 200%;
+        animation-name: backgroundShift;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-play-state: paused; 
+        transition: transform 0.5s;
+        &:hover{
+            animation-play-state: running; 
+            transform: scale(1.1);
+        }
+        &:active {
+            transform: scale(0.9);
+        }
     }
 }
+
 #aboutUs{
-    @include widthAndHeight(100%, 60vh);
-    background-color: $MainColor;
+    @include widthAndHeight(100%, 80vh);
+    background-color: white;
+    color: black;
+    h1{
+        font-size: 100px;
+        @include widthAndHeight(auto, auto);
+        padding-top: 2%;
+        margin-left: 2%;
+    }
+    p{
+        font-size: 18px;
+        margin: 10%;
+        margin-top: 8%;
+        @include widthAndHeight(80%, auto);
+    }
 }
 footer{
-    @include widthAndHeight(100%, 40vh);
+    @include widthAndHeight(100%, 20vh);
     background-color: greenyellow;
+}
+
+
+
+@keyframes backgroundShift {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
