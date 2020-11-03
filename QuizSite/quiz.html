@@ -14,10 +14,10 @@
     <div id="quizContianer">
         <h1>What kind of vegtable are you?</h1>
         <h2 id="question"></h2>
-        <div class="alternatives"><p id="alt1" onclick="changeAlt()"></p></div>
-        <div class="alternatives"><p id="alt2" onclick="changeAlt()"></p></div>
-        <div class="alternatives"><p id="alt3" onclick="changeAlt()"></p></div>
-        <div class="alternatives"><p id="alt4" onclick="changeAlt()"></p></div>
+        <div class="alternatives"><p id="alt1" onclick="changeAlt(1)"></p></div>
+        <div class="alternatives"><p id="alt2" onclick="changeAlt(2)"></p></div>
+        <div class="alternatives"><p id="alt3" onclick="changeAlt(3)"></p></div>
+        <div class="alternatives"><p id="alt4" onclick="changeAlt(4)"></p></div>
     </div>
     <footer>
         <a href="#top">Return to top of page</a>
@@ -31,45 +31,63 @@
     let alt3 = document.getElementById("alt3");
     let alt4 = document.getElementById("alt4");
     let questionCounter = 0;
+    let result = 5;
 
     //question 1
     question.innerHTML = "Question #1, Are you scared of heigths?";
-    alt1.innerHTML = "tjena mittbena";
-    alt2.innerHTML = "dsfsfsdfdsf";
-    alt3.innerHTML = "sknfsngaeong";
-    alt4.innerHTML = "sfkjnspognearh";
+    alt1.innerHTML = "Yes";
+    alt2.innerHTML = "No";
+    alt3.innerHTML = "I don't feel comfortable answering";
+    alt4.innerHTML = "Does it matter!?";
 
 
-    function changeAlt() {
+    function changeAlt(altNumber) {
         questionCounter += 1; 
         
-        if(questionCounter == 1){
-            question.innerHTML = "Question #2, What is your favurite kind of sauce?";
-            alt1.innerHTML = "YOU CLICKED ME!";
-            alt2.innerHTML = "YOU CLICKED ME!";
-            alt3.innerHTML = "YOU CLICKED ME!";
-            alt4.innerHTML = "YOU CLICKED ME!";
+        if(questionCounter == 1){ //question 2
+            question.innerHTML = "Question #2, What is your favorite kind of pasta?";
+            alt1.innerHTML = "Spaghetti";
+            alt2.innerHTML = "Fusilli";
+            alt3.innerHTML = "I have nothing to say";
+            alt4.innerHTML = "Pasta";
         }
-        else if(questionCounter == 2){
-            question.innerHTML = "Question #2, What is your favurite kind of sauce?";
-            alt1.innerHTML = "YOU CLICKED ME!";
-            alt2.innerHTML = "YOU  ME!";
-            alt3.innerHTML = "YOU CLICKED ME!";
-            alt4.innerHTML = "YOU CLICKED ME!";
+        else if(questionCounter == 2){ //question 3
+            question.innerHTML = "Question #3, Do you consider cereal soup?";
+            alt1.innerHTML = "Yes";
+            alt2.innerHTML = "No";
+            alt3.innerHTML = "No comment";
+            alt4.innerHTML = "You are a freak if you think so!!";
         }
-        else if(questionCounter == 3){
-            question.innerHTML = "Question #2, What is your favurite kind of sauce?";
-            alt1.innerHTML = "YOU CLICKED ME!";
-            alt2.innerHTML = "YOU CLICKED ME!";
-            alt3.innerHTML = "YOU CLICKED ME!";
-            alt4.innerHTML = "YOU CLICKED !";
+        else if(questionCounter == 3){ //question 4
+            question.innerHTML = "Question #4, Is a hotdog a sandwich?";
+            alt1.innerHTML = "Yes";
+            alt2.innerHTML = "No";
+            alt3.innerHTML = "Umm....";
+            alt4.innerHTML = "I don't know! Should I?";
         }
-        else if(questionCounter == 4){
-            question.innerHTML = "Question #2, What is your favurite kind of sauce?";
-            alt1.innerHTML = "YOU CLICKED ME!";
-            alt2.innerHTML = "YOU CLICKED ME!";
-            alt3.innerHTML = "YOU CLICKED ME!";
-            alt4.innerHTML = " CLICKED ME!";
+        else if(questionCounter == 4){ //question 5
+            question.innerHTML = "Question #5, And Then He Turns Himself Into A Pickle, Funniest Shit I've Seen In My Life";
+            alt1.innerHTML = "Absolutely";
+            alt2.innerHTML = "Not funny, did not laugh";
+            alt3.innerHTML = "...";
+            alt4.innerHTML = "What kind of quiz is this?";
+        }
+
+        if(altNumber == 1){
+            result -= 5;
+        }
+        else if(altNumber == 2){
+            result -= 2.5;
+        }
+        else if(altNumber == 3){
+            result += 2.5;
+        }
+        else if(altNumber == 4){
+            result += 5;
+        }
+
+        if(questionCounter == 5){
+            //print what you are
         }
     }
 </script>
