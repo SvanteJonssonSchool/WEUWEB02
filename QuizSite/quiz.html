@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzy</title>
+</head>
+<body id="top">
+    <header>
+        <p>Quizzy</p>
+        <a href="#mainContent">Quiz</a>
+        <a href="#aboutUs">About Us</a>
+    </header>
+    <div id="quizContianer">
+        <h1>What kind of vegtable are you?</h1>
+        <h2 id="question"></h2>
+        <div class="alternatives"><p id="alt1" onclick="changeAlt1()"></p></div>
+        <div class="alternatives"><p id="alt2" onclick="changeAlt2()"></p></div>
+        <div class="alternatives"><p id="alt3" onclick="changeAlt3()"></p></div>
+        <div class="alternatives"><p id="alt4" onclick="changeAlt4()"></p></div>
+    </div>
+    <footer>
+        <a href="#top">Return to top of page</a>
+    </footer>
+</body>
+
+<script>
+    let question = document.getElementById("question");
+    let alt1 = document.getElementById("alt1");
+    let alt2 = document.getElementById("alt2");
+    let alt3 = document.getElementById("alt3");
+    let alt4 = document.getElementById("alt4");
+    let questionCounter = 0;
+
+    //question 1
+    question.innerHTML = "Question #1, Are you scared of heigths?";
+    alt1.innerHTML = "tjena mittbena";
+    alt2.innerHTML = "dsfsfsdfdsf";
+    alt3.innerHTML = "sknfsngaeong";
+    alt4.innerHTML = "sfkjnspognearh";
+
+
+    function changeAlt1() {
+        questionCounter += 1; 
+        alt1.innerHTML = "YOU CLICKED ME!";
+    }
+    function changeAlt2() {
+        questionCounter += 1; 
+        alt2.innerHTML = "YOU CLICKED ME";
+    }
+    function changeAlt3() {
+        questionCounter += 1; 
+        alt3.innerHTML = "YOU CLICKED ME";
+    }
+    function changeAlt4() {
+        questionCounter += 1; 
+        alt4.innerHTML = "YOU CLICKED ME";
+    }
+</script>
+</html>
