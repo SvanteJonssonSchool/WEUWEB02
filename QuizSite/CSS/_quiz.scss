@@ -1,0 +1,40 @@
+@import './_variables';
+@import './_functions';
+@import './_animations';
+
+#quizContainer{
+    @include widthAndHeight(100%, 90vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: $main_font;
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    #altContainer{
+        font-size: 20px;
+        @include widthAndHeight(50%, 50%);
+        background-color: green;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        .alternatives{
+            @include widthAndHeight(40%, 20vh);
+            background-color: red;
+            display: none;
+        }
+        .result{
+            display: block;
+            @include widthAndHeight(100%, 100%);
+            background-image: url(../images/cucumber.jpg); //fix with js
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
