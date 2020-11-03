@@ -27,14 +27,14 @@
         .alternatives{
             @include widthAndHeight(40%, 20vh);
             background-color: red;
-            display: none;
         }
-        .result{
-            display: block;
+        #result{
             @include widthAndHeight(100%, 100%);
             background-image: url(../images/cucumber.jpg); //fix with js
             background-size: cover;
             background-position: center;
         }
+        .hidden-class { display: none; }
+        .shown-class { display: inline; }
     }
 }

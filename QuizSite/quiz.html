@@ -17,11 +17,11 @@
         <h1>What kind of vegtable are you?</h1>
         <h2 id="question"></h2>
         <div id="altContainer">
-            <div class="alternatives"><p id="alt1" onclick="changeAlt(1)"></p></div>
-            <div class="alternatives"><p id="alt2" onclick="changeAlt(2)"></p></div>
-            <div class="alternatives"><p id="alt3" onclick="changeAlt(3)"></p></div>
-            <div class="alternatives"><p id="alt4" onclick="changeAlt(4)"></p></div>
-            <div class="result"></div>
+            <div class="alternatives" class="shown-class" id="alt1" onclick="changeAlt(1)"></div>
+            <div class="alternatives" class="shown-class" id="alt2" onclick="changeAlt(2)"></div>
+            <div class="alternatives" class="shown-class" id="alt3" onclick="changeAlt(3)"></div>
+            <div class="alternatives" class="shown-class" id="alt4" onclick="changeAlt(4)"></div>
+            <div id="result" class="hidden-class" onclick="resetQuiz()"></div>
         </div>
     </div>
 </body>
@@ -33,7 +33,9 @@
     let alt3 = document.getElementById("alt3");
     let alt4 = document.getElementById("alt4");
     let questionCounter = 0;
-    let result = 5;
+    let resultIdentifier = 5;
+    let result = document.getElementById("result");
+    var alternatives = [document.getElementById("alt1"), document.getElementById("alt2"), document.getElementById("alt3"), document.getElementById("alt4")];
 
     //question 1
     question.innerHTML = "Question #1, Are you scared of heigths?";
@@ -76,50 +78,87 @@
         }
 
         if(altNumber == 1){
-            result -= 5;
+            resultIdentifier -= 5;
         }
         else if(altNumber == 2){
-            result -= 2.5;
+            resultIdentifier -= 2.5;
         }
         else if(altNumber == 3){
-            result += 2.5;
+            resultIdentifier += 2.5;
         }
         else if(altNumber == 4){
-            result += 5;
+            resultIdentifier += 5;
         }
 
         if(questionCounter == 5){
-            if(result = -20){
-                //gurka
+            
+            for(var i = 0; i < alternatives.length; i++){
+                alternatives[i].className -= "shown-class";
+                alternatives[i].className += "hidden-class";
+                alternatives[i].innerHTML = "";
             }
-            else if(result <= -15){
-                //Spinach
+            result.className += "shown-class";
+            result.className -= "hidden-class";
+
+            if(resultIdentifier == -20){
+                question.innerHTML = "You are a Cucumber!";
+                result.style.backgroundImage = "url(../images/cucumber.jpg)";
             }
-            else if(result <= -10){
-                //Garlic
+            else if(resultIdentifier <= -15){
+                question.innerHTML = "You are Spinach!";
+                result.style.backgroundImage = "url(../images/spinach.jpg)";
             }
-            else if(result <= -5){
-                //Brussels Sprouts
+            else if(resultIdentifier <= -10){
+                question.innerHTML = "You are a Garlic bulb!";
+                result.style.backgroundImage = "url(../images/garlic.jpg)";
             }
-            else if(result <= 0){
-                //Carrots
+            else if(resultIdentifier <= -5){
+                question.innerHTML = "You are Brussels Sprout!";
+                result.style.backgroundImage = "url(../images/brusselsSprouts.jpg)";
             }
-            else if(result <= 5){
-                //Kale
+            else if(resultIdentifier <= 0){
+                question.innerHTML = "You are a Carrot!";
+                result.style.backgroundImage = "url(../images/carrots.jpg)";
             }
-            else if(result <= 5){
-                //Green Peas
+            else if(resultIdentifier <= 5){
+                question.innerHTML = "You are some Kale!";
+                result.style.backgroundImage = "url(../images/kale.jpg)";
             }
-            else if(result <= 10){
-                //Swiss Chard
+            else if(resultIdentifier <= 5){
+                question.innerHTML = "You are a Green Pea!";
+                result.style.backgroundImage = "url(../images/greenPeas.jpg)";
             }
-            else if(result <= 15){
-                //Ginger
+            else if(resultIdentifier <= 10){
+                question.innerHTML = "You are Swiss Chard!";
+                result.style.backgroundImage = "url(../images/swissChard.jpg)";
+            }
+            else if(resultIdentifier <= 15){
+                question.innerHTML = "You are a Ginger!";
+                result.style.backgroundImage = "url(../images/ginger.jpg)";
             }
             else{
-                //Asparagus
+                question.innerHTML = "You are Asparagus!";
+                result.style.backgroundImage = "url(../images/asparagus.jpg)";
             }
         }
     }
+    function resetQuiz() {
+            question.innerHTML = "Question #1, Are you scared of heigths?";
+            alt1.innerHTML = "Yes";
+            alt2.innerHTML = "No";
+            alt3.innerHTML = "I don't feel comfortable answering";
+            alt4.innerHTML = "Does it matter!?";
+
+            resultIdentifier = 0;
+            questionCounter = 0;
+
+            for(var i = 0; i < alternatives.length; i++){
+                alternatives[i].className += "shown-class";
+                alternatives[i].className -= "hidden-class";
+            }
+            //problem here
+            result.className -= "shown-class";
+            result.className += "hidden-class";
+        }
 </script>
 </html>
