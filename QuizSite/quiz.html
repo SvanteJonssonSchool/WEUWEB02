@@ -14,10 +14,10 @@
     <div id="quizContianer">
         <h1>What kind of vegtable are you?</h1>
         <h2 id="question"></h2>
-        <div class="alternatives"><p id="alt1" onclick="changeAlt1()"></p></div>
-        <div class="alternatives"><p id="alt2" onclick="changeAlt2()"></p></div>
-        <div class="alternatives"><p id="alt3" onclick="changeAlt3()"></p></div>
-        <div class="alternatives"><p id="alt4" onclick="changeAlt4()"></p></div>
+        <div class="alternatives"><p id="alt1" onclick="changeAlt()"></p></div>
+        <div class="alternatives"><p id="alt2" onclick="changeAlt()"></p></div>
+        <div class="alternatives"><p id="alt3" onclick="changeAlt()"></p></div>
+        <div class="alternatives"><p id="alt4" onclick="changeAlt()"></p></div>
     </div>
     <footer>
         <a href="#top">Return to top of page</a>
@@ -40,21 +40,37 @@
     alt4.innerHTML = "sfkjnspognearh";
 
 
-    function changeAlt1() {
+    function changeAlt() {
         questionCounter += 1; 
-        alt1.innerHTML = "YOU CLICKED ME!";
-    }
-    function changeAlt2() {
-        questionCounter += 1; 
-        alt2.innerHTML = "YOU CLICKED ME";
-    }
-    function changeAlt3() {
-        questionCounter += 1; 
-        alt3.innerHTML = "YOU CLICKED ME";
-    }
-    function changeAlt4() {
-        questionCounter += 1; 
-        alt4.innerHTML = "YOU CLICKED ME";
+        
+        if(questionCounter == 1){
+            question.innerHTML = "Question #2, What is your favurite kind of sauce?";
+            alt1.innerHTML = "YOU CLICKED ME!";
+            alt2.innerHTML = "YOU CLICKED ME!";
+            alt3.innerHTML = "YOU CLICKED ME!";
+            alt4.innerHTML = "YOU CLICKED ME!";
+        }
+        else if(questionCounter == 2){
+            question.innerHTML = "Question #2, What is your favurite kind of sauce?";
+            alt1.innerHTML = "YOU CLICKED ME!";
+            alt2.innerHTML = "YOU  ME!";
+            alt3.innerHTML = "YOU CLICKED ME!";
+            alt4.innerHTML = "YOU CLICKED ME!";
+        }
+        else if(questionCounter == 3){
+            question.innerHTML = "Question #2, What is your favurite kind of sauce?";
+            alt1.innerHTML = "YOU CLICKED ME!";
+            alt2.innerHTML = "YOU CLICKED ME!";
+            alt3.innerHTML = "YOU CLICKED ME!";
+            alt4.innerHTML = "YOU CLICKED !";
+        }
+        else if(questionCounter == 4){
+            question.innerHTML = "Question #2, What is your favurite kind of sauce?";
+            alt1.innerHTML = "YOU CLICKED ME!";
+            alt2.innerHTML = "YOU CLICKED ME!";
+            alt3.innerHTML = "YOU CLICKED ME!";
+            alt4.innerHTML = " CLICKED ME!";
+        }
     }
 </script>
 </html>
