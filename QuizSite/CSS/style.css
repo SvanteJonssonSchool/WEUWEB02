@@ -37,7 +37,7 @@
 #quizContainer {
   width: 100%;
   height: 90vh;
-  background-image: url(../images/geoPurple.png);
+  background: url(../images/geoPurple.png) #ffffff;
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: top;
@@ -54,12 +54,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
+  font-size: initial;
+  color: #000000;
 }
 
 #quizContainer h1 {
   background-color: #ffffff;
-  font-size: 60px;
+  font-size: 70px;
   margin-bottom: 2%;
 }
 
@@ -70,7 +72,9 @@
 }
 
 #quizContainer #altContainer {
+  font-family: inherit;
   font-size: 30px;
+  color: #ffffff;
   width: 50%;
   height: 60%;
   background-color: #ffffff;
@@ -81,18 +85,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #quizContainer #altContainer .alternatives {
@@ -102,7 +106,6 @@
   background-size: 150% 150%;
   -webkit-box-shadow: 0 0 10px #000000;
           box-shadow: 0 0 10px #000000;
-  color: #ffffff;
   border-radius: 4px;
   text-align: center;
   display: -webkit-box;
@@ -156,18 +159,18 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: inherit;
   font-size: 2vw;
-  font-family: "Roboto", sans-serif;
+  color: #ffffff;
 }
 
 header p {
-  color: #ffffff;
   margin-left: 2%;
   margin-right: auto;
   width: auto;
@@ -191,42 +194,41 @@ header a:hover {
           transform: scale(1.1);
 }
 
-header :last-child {
-  margin-right: 2%;
-}
-
 #mainContent {
   width: 100%;
   height: 90vh;
-  background-color: #000000;
-  background-image: url(../images/geoPurple.png);
+  background: url(../images/geoPurple.png) #000000;
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: top;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  font-family: inherit;
+  font-size: initial;
   color: #ffffff;
 }
 
 #mainContent h1 {
   margin-bottom: 60px;
   font-size: 70px;
+  background-color: #000000;
 }
 
 #mainContent p {
-  font-size: 35px;
+  font-size: 40px;
   margin-bottom: 60px;
+  background-color: #000000;
 }
 
 #mainContent a {
@@ -239,19 +241,11 @@ header :last-child {
   height: auto;
   padding-top: 25px;
   padding-bottom: 25px;
-  background: -webkit-gradient(linear, right top, left top, from(#ff6622), to(#ff27e9));
-  background: linear-gradient(270deg, #ff6622, #ff27e9);
+  background: -webkit-gradient(linear, right top, left top, from(#6f2da8), to(#d1357b));
+  background: linear-gradient(270deg, #6f2da8, #d1357b);
   background-size: 200% 200%;
-  -webkit-animation-name: backgroundShift;
-          animation-name: backgroundShift;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  -webkit-animation: backgroundShift 2s ease-in-out infinite paused;
+          animation: backgroundShift 2s ease-in-out infinite paused;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -273,11 +267,13 @@ header :last-child {
 #aboutUs {
   width: 100%;
   height: 90vh;
+  font-family: inherit;
+  font-size: initial;
+  color: #000000;
   background: url(../images/geo.png) #ffffff;
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: top;
-  color: #000000;
 }
 
 #aboutUs h1 {
@@ -294,7 +290,7 @@ header :last-child {
   font-weight: 600;
   background-color: #ffffff;
   line-height: 2em;
-  font-size: 22px;
+  font-size: 20px;
   margin: 15%;
   margin-top: 8%;
   width: 70%;
@@ -308,18 +304,19 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Roboto", sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer a {
-  background-color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
   color: #6f2da8;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 5px;
   text-align: center;

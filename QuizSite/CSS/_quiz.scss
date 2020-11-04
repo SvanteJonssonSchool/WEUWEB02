@@ -4,15 +4,10 @@
 
 #quizContainer{
     @include widthAndHeight(100%, 90vh);
-    background-image: url(../images/geoPurple.png);
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: top;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include backgroundApperance(url(../images/geoPurple.png), $backLight, 120%, no-repeat, top);
+    @include horizontalVerticalAlign(center, center);
     flex-direction: column;
-    font-family: $main_font;
+    @include textApperance(inherit, initial, $font_color_dark);
     h1{
         background-color: $backLight;
         font-size: $font_size_quiz_title;
@@ -24,28 +19,23 @@
         margin-bottom: 1%;
     }
     #altContainer{
-        font-size: $font_size_quiz_alt;
+        @include textApperance(inherit, $font_size_quiz_alt, $font_color_light);
         @include widthAndHeight(50%, 60%);
         background-color: $backLight;
         border: 5px solid #cacaca;
         border-radius: 4px;
         box-shadow: inset 0 0 15px #000000;
-        display: flex;
+        @include horizontalVerticalAlign(space-evenly, center);
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
         .alternatives{
             @include widthAndHeight(40%, 20vh);
             background-color: $SecondaryColor;
             background-size: 150% 150%;
             box-shadow: 0 0 10px #000000;
-            color: $font_color_light;
             border-radius: 4px;
             text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include horizontalVerticalAlign(center, center);
             transition: transform 0.5s;
             &:hover{
                 transform: scale(1.1);

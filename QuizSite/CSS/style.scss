@@ -11,64 +11,48 @@
 header{
     @include widthAndHeight(100%, 10vh);
     background-color: $MainColor;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: $font_size_header;
-    font-family: $main_font;
+    @include horizontalVerticalAlign(flex-start, center);
+    @include textApperance(inherit, $font_size_header, $font_color_light);
     p{
-        color: $font_color_light;
         margin-left: 2%;
         margin-right: auto;
         @include widthAndHeight(auto, auto);
     }
     a{
-        color: $font_color_light;
+        color: $font_color_light; //do not inherit from header
         margin-right: 2%;
         @include widthAndHeight(auto, auto);
         @include linkApperance();
     }
-    :last-child{
-        margin-right: 2%;
-    }
 }
 #mainContent{
     @include widthAndHeight(100%, 90vh);
-    background-color: $backDark;
-    background-image: url(../images/geoPurple.png);
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: top;
-    display: flex;
+    @include backgroundApperance(url(../images/geoPurple.png), $backDark, 120%, no-repeat, top);
+    @include horizontalVerticalAlign(center, center);
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $font_color_light;
+    @include textApperance(inherit, initial, $font_color_light);
     h1{
         margin-bottom: 60px;
         font-size: $font_size_quiz_title;
+        background-color: $backDark;
     }
     p{
         font-size: $font_size_quiz_s_title;
         margin-bottom: 60px;
+        background-color: $backDark;
     }
     a{
         font-size: $font_size_quiz_link;
-        color: $font_color_light;
+        color: $font_color_light; // do not inherit
         text-align: center;
         text-decoration: none;
         border-radius: 50px;
-        width: 400px;
-        height: auto;
+        @include widthAndHeight(400px, auto);
         padding-top: 25px;
         padding-bottom: 25px;
-        background: linear-gradient(270deg, #ff6622, #ff27e9);
+        background: linear-gradient(270deg, $MainColor, $SecondaryColor);
         background-size: 200% 200%;
-        animation-name: backgroundShift;
-        animation-duration: 2s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-play-state: paused; 
+        animation: backgroundShift 2s ease-in-out infinite paused;
         transition: transform 0.5s;
         &:hover{
             animation-play-state: running; 
@@ -82,15 +66,12 @@ header{
 
 #aboutUs{
     @include widthAndHeight(100%, 90vh);
-    background: url(../images/geo.png) $backLight;
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: top;
-    color: $font_color_dark;
+    @include textApperance(inherit, initial, $font_color_dark);
+    @include backgroundApperance(url(../images/geo.png), $backLight, 120%, no-repeat, top);
     h1{
         background-color: $backLight;
         color: $SecondaryColor;
-        font-size: ($font_size_h1 + 30px);
+        font-size: $font_size_about_title;
         @include widthAndHeight(auto, auto);
         padding-top: 2%;
         margin-left: 2%;
@@ -99,7 +80,7 @@ header{
         font-weight: 600;
         background-color: $backLight;
         line-height: 2em;
-        font-size: 22px;
+        font-size: $font_size_body;
         margin: 15%;
         margin-top: 8%;
         @include widthAndHeight(70%, auto);
@@ -108,13 +89,10 @@ header{
 footer{
     @include widthAndHeight(100%, 10vh);
     background-color: $MainColor;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $main_font;
+    @include horizontalVerticalAlign(center, center);
     a{
+        @include textApperance(inherit, $font_size_footer, $MainColor);
         background-color: $backLight;
-        color: $MainColor;
         padding: 20px;
         border-radius: 5px;
         text-align: center;
