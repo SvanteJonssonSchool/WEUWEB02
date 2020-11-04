@@ -6,21 +6,24 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: $main_font;
 }
 header{
     @include widthAndHeight(100%, 10vh);
-    background-color: red;
+    background-color: $MainColor;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     font-size: $font_size_header;
     font-family: $main_font;
     p{
+        color: $font_color_light;
         margin-left: 2%;
         margin-right: auto;
         @include widthAndHeight(auto, auto);
     }
     a{
+        color: $font_color_light;
         margin-right: 2%;
         @include widthAndHeight(auto, auto);
         @include linkApperance();
@@ -31,24 +34,27 @@ header{
 }
 #mainContent{
     @include widthAndHeight(100%, 90vh);
-    background-color: black;
-    font-family: $main_font;
+    background-color: $backDark;
+    background-image: url(../images/geoPurple.png);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: top;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: $font_color_light;
     h1{
         margin-bottom: 60px;
-        font-size: 70px;
+        font-size: $font_size_quiz_title;
     }
     p{
-        font-size: 35px;
+        font-size: $font_size_quiz_s_title;
         margin-bottom: 60px;
     }
     a{
-        font-size: 30px;
-        color: #ffffffff;
+        font-size: $font_size_quiz_link;
+        color: $font_color_light;
         text-align: center;
         text-decoration: none;
         border-radius: 50px;
@@ -75,31 +81,42 @@ header{
 }
 
 #aboutUs{
-    @include widthAndHeight(100%, 80vh);
-    background-color: white;
-    color: black;
+    @include widthAndHeight(100%, 90vh);
+    background: url(../images/geo.png) $backLight;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: top;
+    color: $font_color_dark;
     h1{
-        font-size: 100px;
+        background-color: $backLight;
+        color: $SecondaryColor;
+        font-size: ($font_size_h1 + 30px);
         @include widthAndHeight(auto, auto);
         padding-top: 2%;
         margin-left: 2%;
     }
     p{
-        font-size: 18px;
-        margin: 10%;
+        font-weight: 600;
+        background-color: $backLight;
+        line-height: 2em;
+        font-size: 22px;
+        margin: 15%;
         margin-top: 8%;
-        @include widthAndHeight(80%, auto);
+        @include widthAndHeight(70%, auto);
     }
 }
 footer{
-    @include widthAndHeight(100%, 20vh);
-    background-color: greenyellow;
+    @include widthAndHeight(100%, 10vh);
+    background-color: $MainColor;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: $main_font;
     a{
-        background-color: red;
+        background-color: $backLight;
+        color: $MainColor;
         padding: 20px;
+        border-radius: 5px;
         text-align: center;
         @include linkApperance();
     }

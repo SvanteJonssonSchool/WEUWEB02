@@ -10,17 +10,17 @@
 <body id="top">
     <header>
         <p>Quizzy</p>
-        <a href="#mainContent">Quiz</a>
+        <a href="index.html#top">Quiz</a>
         <a href="index.html#aboutUs">About Us</a>
     </header>
     <div id="quizContainer">
         <h1>What kind of vegtable are you?</h1>
         <h2 id="question"></h2>
         <div id="altContainer">
-            <div class="alternatives" class="shown-class" id="alt1" onclick="changeAlt(1)"></div>
-            <div class="alternatives" class="shown-class" id="alt2" onclick="changeAlt(2)"></div>
-            <div class="alternatives" class="shown-class" id="alt3" onclick="changeAlt(3)"></div>
-            <div class="alternatives" class="shown-class" id="alt4" onclick="changeAlt(4)"></div>
+            <div class="alternatives" class="shown-class" onclick="changeAlt(1)"><p id="alt1"></p></div>
+            <div class="alternatives" class="shown-class" onclick="changeAlt(2)"><p id="alt2"></p></div>
+            <div class="alternatives" class="shown-class" onclick="changeAlt(3)"><p id="alt3"></p></div>
+            <div class="alternatives" class="shown-class" onclick="changeAlt(4)"><p id="alt4"></p></div>
             <div id="result" class="hidden-class" onclick="resetQuiz()"></div>
         </div>
     </div>
@@ -70,8 +70,8 @@
             alt4.innerHTML = "I don't know! Should I?";
         }
         else if(questionCounter == 4){ //question 5
-            question.innerHTML = "Question #5, And Then He Turns Himself Into A Pickle, Funniest Shit I've Seen In My Life";
-            alt1.innerHTML = "Absolutely";
+            question.innerHTML = "And Then He Turns Himself Into A Pickle, Funniest Shit I've Seen In My Life";
+            alt1.innerHTML = "Hilarious";
             alt2.innerHTML = "Not funny, did not laugh";
             alt3.innerHTML = "...";
             alt4.innerHTML = "What kind of quiz is this?";
@@ -93,8 +93,8 @@
         if(questionCounter == 5){
             
             for(var i = 0; i < alternatives.length; i++){
-                alternatives[i].className -= "shown-class";
-                alternatives[i].className += "hidden-class";
+                alternatives[i].parentElement.className -= "shown-class";
+                alternatives[i].parentElement.className += "hidden-class";
                 alternatives[i].innerHTML = "";
             }
             result.className += "shown-class";

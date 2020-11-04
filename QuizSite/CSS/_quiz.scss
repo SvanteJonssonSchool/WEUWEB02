@@ -4,21 +4,32 @@
 
 #quizContainer{
     @include widthAndHeight(100%, 90vh);
+    background-image: url(../images/geoPurple.png);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: top;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: $main_font;
     h1{
-        font-size: 60px;
+        background-color: $backLight;
+        font-size: $font_size_quiz_title;
+        margin-bottom: 2%;
     }
     h2{
-        font-size: 40px;
+        background-color: $backLight;
+        font-size: $font_size_quiz_s_title;
+        margin-bottom: 1%;
     }
     #altContainer{
-        font-size: 20px;
-        @include widthAndHeight(50%, 50%);
-        background-color: green;
+        font-size: $font_size_quiz_alt;
+        @include widthAndHeight(50%, 60%);
+        background-color: $backLight;
+        border: 5px solid #cacaca;
+        border-radius: 4px;
+        box-shadow: inset 0 0 15px #000000;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -26,7 +37,19 @@
         align-items: center;
         .alternatives{
             @include widthAndHeight(40%, 20vh);
-            background-color: red;
+            background-color: $SecondaryColor;
+            background-size: 150% 150%;
+            box-shadow: 0 0 10px #000000;
+            color: $font_color_light;
+            border-radius: 4px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
         #result{
             @include widthAndHeight(100%, 100%);
