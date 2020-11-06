@@ -33,7 +33,7 @@
     let alt3 = document.getElementById("alt3");
     let alt4 = document.getElementById("alt4");
     let questionCounter = 0;
-    let resultIdentifier = 5;
+    let resultIdentifier = 5;   //used to calculate what result you will get
     let result = document.getElementById("result");
     var alternatives = [document.getElementById("alt1"), document.getElementById("alt2"), document.getElementById("alt3"), document.getElementById("alt4")];
 
@@ -77,7 +77,7 @@
             alt4.innerHTML = "What kind of quiz is this?";
         }
 
-        if(altNumber == 1){
+        if(altNumber == 1){ //different alternatives a worth different points, giving you different reults
             resultIdentifier -= 5;
         }
         else if(altNumber == 2){
@@ -93,12 +93,12 @@
         if(questionCounter == 5){
             
             for(var i = 0; i < alternatives.length; i++){
-                alternatives[i].parentElement.className -= "shown-class";
-                alternatives[i].parentElement.className += "hidden-class";
+                alternatives[i].parentElement.className -= "shown-class";   //problem with this. class becomes NaN
+                alternatives[i].parentElement.className += "hidden-class";  //problem with this. class becomes NaN
                 alternatives[i].innerHTML = "";
             }
-            result.className += "shown-class";
-            result.className -= "hidden-class";
+            result.className += "shown-class";  //problem with this. class becomes NaN
+            result.className -= "hidden-class"; //problem with this. class becomes NaN
 
             if(resultIdentifier == -20){
                 question.innerHTML = "You are a Cucumber!";
@@ -142,23 +142,22 @@
             }
         }
     }
-    function resetQuiz() {
+    function resetQuiz() {  //sets question + alternatives to default
             question.innerHTML = "Question #1, Are you scared of heigths?";
             alt1.innerHTML = "Yes";
             alt2.innerHTML = "No";
             alt3.innerHTML = "I don't feel comfortable answering";
             alt4.innerHTML = "Does it matter!?";
 
-            resultIdentifier = 0;
+            resultIdentifier = 5;   //counter and result sets to default
             questionCounter = 0;
 
             for(var i = 0; i < alternatives.length; i++){
-                alternatives[i].className += "shown-class";
-                alternatives[i].className -= "hidden-class";
+                alternatives[i].className += "shown-class"; //problem with this. class becomes NaN
+                alternatives[i].className -= "hidden-class";//problem with this. class becomes NaN
             }
-            //problem here
-            result.className -= "shown-class";
-            result.className += "hidden-class";
+            result.className -= "shown-class";//problem with this. class becomes NaN
+            result.className += "hidden-class";//problem with this. class becomes NaN
         }
 </script>
 </html>

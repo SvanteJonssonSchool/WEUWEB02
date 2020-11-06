@@ -131,7 +131,6 @@
 #quizContainer #altContainer #result {
   width: 100%;
   height: 100%;
-  background-image: url(../images/cucumber.jpg);
   background-size: cover;
   background-position: center;
 }

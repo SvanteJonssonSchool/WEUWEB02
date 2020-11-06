@@ -1,11 +1,11 @@
 @import './_variables';
 
-@mixin widthAndHeight($width, $height) {
+@mixin widthAndHeight($width, $height) {    //choose width and heigth for element
     width: $width;
     height: $height;
 }
 
-@mixin linkApperance() {
+@mixin linkApperance() {    //appearance of links in header + footer
     text-decoration: none;
     transition: transform 0.5s text-shadow 5s;
     &:hover{
@@ -13,19 +13,19 @@
     }
 }
 
-@mixin horizontalVerticalAlign($horizontal, $vertical){
+@mixin horizontalVerticalAlign($horizontal, $vertical){ //align children vertically and horizontally 
     display: flex;
     justify-content: $horizontal;
     align-items: $vertical;
 }
 
-@mixin textApperance($family, $size, $color){
+@mixin textApperance($family, $size, $color){   //apperance of text based on three parameters
     font-family: $family;
     font-size: $size;
     color: $color;
 }
 
-@mixin backgroundApperance($url, $bgcColor, $size, $repeat, $position){
+@mixin backgroundApperance($url, $bgcColor, $size, $repeat, $position){ //apperance of background, image/color, size of background, if image is to repeat, position of image
     background: $url $bgcColor;
     background-size: $size;
     background-repeat: $repeat;
