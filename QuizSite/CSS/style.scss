@@ -2,46 +2,54 @@
 @import './_functions';
 @import './_animations';
 @import './_quiz';
-*{
+
+* {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: $main_font;
 }
-header{
+
+header {
     @include widthAndHeight(100%, 10vh);
     background-color: $MainColor;
     @include horizontalVerticalAlign(flex-start, center);
     @include textApperance(inherit, $font_size_header, $font_color_light);
-    p{
+
+    p {
         margin-left: 2%;
         margin-right: auto;
         @include widthAndHeight(auto, auto);
     }
-    a{
+
+    a {
         color: $font_color_light; //do not inherit from header
         margin-right: 2%;
         @include widthAndHeight(auto, auto);
         @include linkApperance();
     }
 }
-#mainContent{
+
+#mainContent {
     @include widthAndHeight(100%, 90vh);
     @include backgroundApperance(url(../images/geoPurple.png), $backDark, 120%, no-repeat, top);
     @include horizontalVerticalAlign(center, center);
     flex-direction: column;
     @include textApperance(inherit, initial, $font_color_light);
-    h1{
+
+    h1 {
         margin-bottom: 60px;
         font-size: $font_size_quiz_title;
         background-color: $backDark;
     }
-    p{
+
+    p {
         font-size: $font_size_quiz_s_title;
         margin-bottom: 60px;
         background-color: $backDark;
     }
-    a{
+
+    a {
         font-size: $font_size_quiz_link;
         color: $font_color_light; // do not inherit
         text-align: center;
@@ -54,21 +62,24 @@ header{
         background-size: 200% 200%;
         animation: backgroundShift 2s ease-in-out infinite paused;
         transition: transform 0.5s;
-        &:hover{
-            animation-play-state: running; 
+
+        &:hover {
+            animation-play-state: running;
             transform: scale(1.1);
         }
+
         &:active {
             transform: scale(0.9);
         }
     }
 }
 
-#aboutUs{
+#aboutUs {
     @include widthAndHeight(100%, 90vh);
     @include textApperance(inherit, initial, $font_color_dark);
     @include backgroundApperance(url(../images/geo.png), $backLight, 120%, no-repeat, top);
-    h1{
+
+    h1 {
         background-color: $backLight;
         color: $SecondaryColor;
         font-size: $font_size_about_title;
@@ -76,7 +87,8 @@ header{
         padding-top: 2%;
         margin-left: 2%;
     }
-    p{
+
+    p {
         font-weight: 600;
         background-color: $backLight;
         line-height: 2em;
@@ -86,11 +98,13 @@ header{
         @include widthAndHeight(70%, auto);
     }
 }
-footer{
+
+footer {
     @include widthAndHeight(100%, 10vh);
     background-color: $MainColor;
     @include horizontalVerticalAlign(center, center);
-    a{
+
+    a {
         @include textApperance(inherit, $font_size_footer, $MainColor);
         background-color: $backLight;
         padding: 20px;
@@ -99,6 +113,3 @@ footer{
         @include linkApperance();
     }
 }
-
-
-

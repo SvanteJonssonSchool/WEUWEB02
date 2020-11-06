@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <title>Quizzy</title>
 </head>
+
 <body id="top">
     <header>
         <p>Quizzy</p>
@@ -17,10 +19,18 @@
         <h1>What kind of vegtable are you?</h1>
         <h2 id="question"></h2>
         <div id="altContainer">
-            <div class="alternatives" class="shown-class" onclick="changeAlt(1)"><p id="alt1"></p></div>
-            <div class="alternatives" class="shown-class" onclick="changeAlt(2)"><p id="alt2"></p></div>
-            <div class="alternatives" class="shown-class" onclick="changeAlt(3)"><p id="alt3"></p></div>
-            <div class="alternatives" class="shown-class" onclick="changeAlt(4)"><p id="alt4"></p></div>
+            <div class="alternatives" class="shown-class" onclick="changeAlt(1)">
+                <p id="alt1"></p>
+            </div>
+            <div class="alternatives" class="shown-class" onclick="changeAlt(2)">
+                <p id="alt2"></p>
+            </div>
+            <div class="alternatives" class="shown-class" onclick="changeAlt(3)">
+                <p id="alt3"></p>
+            </div>
+            <div class="alternatives" class="shown-class" onclick="changeAlt(4)">
+                <p id="alt4"></p>
+            </div>
             <div id="result" class="hidden-class" onclick="resetQuiz()"></div>
         </div>
     </div>
@@ -33,9 +43,10 @@
     let alt3 = document.getElementById("alt3");
     let alt4 = document.getElementById("alt4");
     let questionCounter = 0;
-    let resultIdentifier = 5;   //used to calculate what result you will get
+    let resultIdentifier = 5; //used to calculate what result you will get
     let result = document.getElementById("result");
-    var alternatives = [document.getElementById("alt1"), document.getElementById("alt2"), document.getElementById("alt3"), document.getElementById("alt4")];
+    var alternatives = [document.getElementById("alt1"), document.getElementById("alt2"), document.getElementById(
+        "alt3"), document.getElementById("alt4")];
 
     //question 1
     question.innerHTML = "Question #1, Are you scared of heigths?";
@@ -46,30 +57,27 @@
 
 
     function changeAlt(altNumber) {
-        questionCounter += 1; 
-        
-        if(questionCounter == 1){ //question 2
+        questionCounter += 1;
+
+        if (questionCounter == 1) { //question 2
             question.innerHTML = "Question #2, What is your favorite kind of pasta?";
             alt1.innerHTML = "Spaghetti";
             alt2.innerHTML = "Fusilli";
             alt3.innerHTML = "I have nothing to say";
             alt4.innerHTML = "Pasta";
-        }
-        else if(questionCounter == 2){ //question 3
+        } else if (questionCounter == 2) { //question 3
             question.innerHTML = "Question #3, Do you consider cereal soup?";
             alt1.innerHTML = "Yes";
             alt2.innerHTML = "No";
             alt3.innerHTML = "No comment";
             alt4.innerHTML = "You are a freak if you think so!!";
-        }
-        else if(questionCounter == 3){ //question 4
+        } else if (questionCounter == 3) { //question 4
             question.innerHTML = "Question #4, Is a hotdog a sandwich?";
             alt1.innerHTML = "Yes";
             alt2.innerHTML = "No";
             alt3.innerHTML = "Umm....";
             alt4.innerHTML = "I don't know! Should I?";
-        }
-        else if(questionCounter == 4){ //question 5
+        } else if (questionCounter == 4) { //question 5
             question.innerHTML = "And Then He Turns Himself Into A Pickle, Funniest Shit I've Seen In My Life";
             alt1.innerHTML = "Hilarious";
             alt2.innerHTML = "Not funny, did not laugh";
@@ -77,87 +85,77 @@
             alt4.innerHTML = "What kind of quiz is this?";
         }
 
-        if(altNumber == 1){ //different alternatives a worth different points, giving you different reults
+        if (altNumber == 1) { //different alternatives a worth different points, giving you different reults
             resultIdentifier -= 5;
-        }
-        else if(altNumber == 2){
+        } else if (altNumber == 2) {
             resultIdentifier -= 2.5;
-        }
-        else if(altNumber == 3){
+        } else if (altNumber == 3) {
             resultIdentifier += 2.5;
-        }
-        else if(altNumber == 4){
+        } else if (altNumber == 4) {
             resultIdentifier += 5;
         }
 
-        if(questionCounter == 5){
-            
-            for(var i = 0; i < alternatives.length; i++){
-                alternatives[i].parentElement.className -= "shown-class";   //problem with this. class becomes NaN
-                alternatives[i].parentElement.className += "hidden-class";  //problem with this. class becomes NaN
+        if (questionCounter == 5) {
+
+            for (var i = 0; i < alternatives.length; i++) {
+                alternatives[i].parentElement.className -= "shown-class"; //problem with this. class becomes NaN
+                alternatives[i].parentElement.className += "hidden-class"; //problem with this. class becomes NaN
                 alternatives[i].innerHTML = "";
             }
-            result.className += "shown-class";  //problem with this. class becomes NaN
+            result.className += "shown-class"; //problem with this. class becomes NaN
             result.className -= "hidden-class"; //problem with this. class becomes NaN
 
-            if(resultIdentifier == -20){
+            if (resultIdentifier == -20) {
                 question.innerHTML = "You are a Cucumber!";
                 result.style.backgroundImage = "url(../images/cucumber.jpg)";
-            }
-            else if(resultIdentifier <= -15){
+            } else if (resultIdentifier <= -15) {
                 question.innerHTML = "You are Spinach!";
                 result.style.backgroundImage = "url(../images/spinach.jpg)";
-            }
-            else if(resultIdentifier <= -10){
+            } else if (resultIdentifier <= -10) {
                 question.innerHTML = "You are a Garlic bulb!";
                 result.style.backgroundImage = "url(../images/garlic.jpg)";
-            }
-            else if(resultIdentifier <= -5){
+            } else if (resultIdentifier <= -5) {
                 question.innerHTML = "You are Brussels Sprout!";
                 result.style.backgroundImage = "url(../images/brusselsSprouts.jpg)";
-            }
-            else if(resultIdentifier <= 0){
+            } else if (resultIdentifier <= 0) {
                 question.innerHTML = "You are a Carrot!";
                 result.style.backgroundImage = "url(../images/carrots.jpg)";
-            }
-            else if(resultIdentifier <= 5){
+            } else if (resultIdentifier <= 5) {
                 question.innerHTML = "You are some Kale!";
                 result.style.backgroundImage = "url(../images/kale.jpg)";
-            }
-            else if(resultIdentifier <= 5){
+            } else if (resultIdentifier <= 5) {
                 question.innerHTML = "You are a Green Pea!";
                 result.style.backgroundImage = "url(../images/greenPeas.jpg)";
-            }
-            else if(resultIdentifier <= 10){
+            } else if (resultIdentifier <= 10) {
                 question.innerHTML = "You are Swiss Chard!";
                 result.style.backgroundImage = "url(../images/swissChard.jpg)";
-            }
-            else if(resultIdentifier <= 15){
+            } else if (resultIdentifier <= 15) {
                 question.innerHTML = "You are a Ginger!";
                 result.style.backgroundImage = "url(../images/ginger.jpg)";
-            }
-            else{
+            } else {
                 question.innerHTML = "You are Asparagus!";
                 result.style.backgroundImage = "url(../images/asparagus.jpg)";
             }
         }
     }
-    function resetQuiz() {  //sets question + alternatives to default
-            question.innerHTML = "Question #1, Are you scared of heigths?";
-            alt1.innerHTML = "Yes";
-            alt2.innerHTML = "No";
-            alt3.innerHTML = "I don't feel comfortable answering";
-            alt4.innerHTML = "Does it matter!?";
 
-            resultIdentifier = 5;   //counter and result sets to default
-            questionCounter = 0;
+    function resetQuiz() { //sets question + alternatives to default
+        question.innerHTML = "Question #1, Are you scared of heigths?";
+        alt1.innerHTML = "Yes";
+        alt2.innerHTML = "No";
+        alt3.innerHTML = "I don't feel comfortable answering";
+        alt4.innerHTML = "Does it matter!?";
 
-            for(var i = 0; i < alternatives.length; i++){
-                alternatives[i].className += "shown-class"; //problem with this. class becomes NaN
-                alternatives[i].className -= "hidden-class";//problem with this. class becomes NaN
-            }
-            result.className -= "shown-class";//problem with this. class becomes NaN
-            result.className += "hidden-class";//problem with this. class becomes NaN
+        resultIdentifier = 5; //counter and result sets to default
+        questionCounter = 0;
+
+        for (var i = 0; i < alternatives.length; i++) {
+            alternatives[i].className += "shown-class"; //problem with this. class becomes NaN
+            alternatives[i].className -= "hidden-class"; //problem with this. class becomes NaN
         }
+        result.className -= "shown-class"; //problem with this. class becomes NaN
+        result.className += "hidden-class"; //problem with this. class becomes NaN
+    }
 </script>
+
 </html>
