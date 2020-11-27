@@ -13,30 +13,32 @@
 
     <!-- IMPORT OF MY CSS/JS -->
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/includeHTML.js"></script>
+    <script src="./js/myFunctions.js"></script>
 
     <script>
         window.onload = function(){
             includeHTML();
             showModal();
         }
-        function showModal(){
-            $("#myModal").modal('show');
-        }
     </script>
 </head>
 
 <body>
+    <!--HEADER/NAVBAR-->
     <div includeHTML="./header.html"></div>
+    <!--MODAL ABOUT COOKIES-->
     <div id="myModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
+              <!--MODAL HEADER-->
             <div class="modal-header">
               <h5 class="modal-title">Välkommen till Hem Elektronik!</h5>
             </div>
+            <!--MODAL TEXT-->
             <div class="modal-body">
               <p>Här används kakor! Är du okej med det?</p>
             </div>
+            <!--MODAL BUTTONS-->
             <div class="modal-footer">
                 <a href="https://www.pts.se/sv/privat/internet/integritet/kakor-cookies/" class="badge badge-light">Vad är kakor?</a>
               <button type="button" class="btn btn-primary" data-dismiss="modal">Acceptera</button>
@@ -44,6 +46,7 @@
           </div>
         </div>
       </div>
+      <!--SITE FOOTER-->
     <div includeHTML="./footer.html"></div>
 </body>
 

@@ -30,3 +30,8 @@ function includeHTML() {
         }
     }
 }
+
+//To show modal
+function showModal(){
+    $("#myModal").modal('show');
+}
