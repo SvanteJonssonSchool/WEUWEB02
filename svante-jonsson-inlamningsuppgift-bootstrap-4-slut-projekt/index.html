@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hem Elektronic</title>
+    <title>Hem Elektronik</title>
 
     <!-- IMPORT OF BOOTSTRAP 4 -->
     <link rel="stylesheet" href="./bs4/css/bootstrap.css">
@@ -14,11 +14,36 @@
     <!-- IMPORT OF MY CSS/JS -->
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/includeHTML.js"></script>
+
+    <script>
+        window.onload = function(){
+            includeHTML();
+            showModal();
+        }
+        function showModal(){
+            $("#myModal").modal('show');
+        }
+    </script>
 </head>
 
-<body onload="includeHTML()">
+<body>
     <div includeHTML="./header.html"></div>
-
+    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Välkommen till Hem Elektronik!</h5>
+            </div>
+            <div class="modal-body">
+              <p>Här används kakor! Är du okej med det?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.pts.se/sv/privat/internet/integritet/kakor-cookies/" class="badge badge-light">Vad är kakor?</a>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Acceptera</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <div includeHTML="./footer.html"></div>
 </body>
 
