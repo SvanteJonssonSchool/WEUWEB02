@@ -7,3 +7,9 @@ footer{
 .modal-body > p{
     margin: auto;
 }
+.jumbotron{
+    background-color: red;
+    background-image: url('../images/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: 56% 20%;
+}
