@@ -14,4 +14,8 @@ footer{
     background-repeat: no-repeat;
     background-position: 55% 20%;
     background-size: cover;
+    border-radius: 0;
+}
+.row{
+    width: 100%;
 }
