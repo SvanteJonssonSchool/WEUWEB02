@@ -8,8 +8,10 @@ footer{
     margin: auto;
 }
 .jumbotron{
-    background-color: red;
-    background-image: url('../images/banner.jpg');
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+    background-image: url('../images/banner.png');
     background-repeat: no-repeat;
-    background-position: 56% 20%;
+    background-position: 55% 20%;
+    background-size: cover;
 }

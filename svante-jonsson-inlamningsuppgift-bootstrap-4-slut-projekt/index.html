@@ -2,91 +2,94 @@
 <html lang="en">
 
 <head>
-    <!--SITE INFO-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hem Elektronik</title>
-    <link rel="icon" href="https://uploads.marksism.space/image/6d1d957424e6e13d4762636bc1b1a503.png">
-    <!-- IMPORT OF BOOTSTRAP 4 -->
-    <link rel="stylesheet" href="./bs4/css/bootstrap.css">
-    <script src="./js/JQuery.js"></script>
-    <script src="./bs4/js/bootstrap.js"></script>
+  <!--SITE INFO-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hem Elektronik</title>
+  <link rel="icon" href="https://uploads.marksism.space/image/6d1d957424e6e13d4762636bc1b1a503.png">
+  <!-- IMPORT OF BOOTSTRAP 4 -->
+  <link rel="stylesheet" href="./bs4/css/bootstrap.css">
+  <script src="./js/JQuery.js"></script>
+  <script src="./bs4/js/bootstrap.js"></script>
 
-    <!-- IMPORT OF MY CSS/JS -->
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/myFunctions.js"></script>
+  <!-- IMPORT OF MY CSS/JS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/myFunctions.js"></script>
 
-    <script>
-        window.onload = function(){
-            includeHTML();
-            showModal();
-        }
-    </script>
+  <script>
+    window.onload = function () {
+      includeHTML();
+      showModal();
+    }
+  </script>
 </head>
 
 <body>
-    <!--HEADER/NAVBAR-->
-    <div includeHTML="./header.html"></div>
+  <!--HEADER/NAVBAR-->
+  <div includeHTML="./header.html"></div>
 
-    <!--MODAL ABOUT COOKIES-->
-    <div id="myModal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <!--MODAL HEADER-->
-            <div class="modal-header">
-              <h5 class="modal-title">Välkommen till Hem Elektronik!</h5>
-            </div>
-            <!--MODAL TEXT-->
-            <div class="modal-body">
-              <p>Här används kakor! Är du okej med det?</p>
-            </div>
-            <!--MODAL BUTTONS-->
-            <div class="modal-footer">
-                <a href="https://www.pts.se/sv/privat/internet/integritet/kakor-cookies/" class="badge badge-light">Vad är kakor?</a>
-              <button type="button" class="btn btn-primary" data-dismiss="modal">Acceptera</button>
-            </div>
-          </div>
+  <!--MODAL ABOUT COOKIES-->
+  <div id="myModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!--MODAL HEADER-->
+        <div class="modal-header">
+          <h5 class="modal-title">Välkommen till Hem Elektronik!</h5>
         </div>
-    </div>
-
-    <!--MAIN CONTENT OF PAGE-->
-    <!--Banner-->
-    <div class="jumbotron">
-      <h1 class="display-4">Hitta det du vill ha</h1>
-      <p class="lead">Allt inom hushåll hittar du här</p>
-      <p>Allt från damsugare och tvättmaskiner till lagring och rengöring</p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </p>
-    </div>
-
-    <!--Cards about Pruducts, Services and Warranty-->
-    <div class="card mb-3" style="max-width: 45vw;">
-      <div class="row no-gutters">
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Produkter</h5>
-            <p class="card-text">Hos oss finner du alla möjliga trevliga saker. Allt från diskmaskiner till dammsugare!</p>
-            <a href="" class="stretched-link">Se mer</a>
-          </div>
+        <!--MODAL TEXT-->
+        <div class="modal-body">
+          <p>Här används kakor! Är du okej med det?</p>
+        </div>
+        <!--MODAL BUTTONS-->
+        <div class="modal-footer">
+          <a href="https://www.pts.se/sv/privat/internet/integritet/kakor-cookies/" class="badge badge-light">Vad är
+            kakor?</a>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Acceptera</button>
         </div>
       </div>
     </div>
-    <div class="card mb-3" style="max-width: 45vw;">
-      <div class="row no-gutters">
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Tjänster</h5>
-            <p class="card-text">Hos oss finner du alla möjliga trevliga saker. Allt från diskmaskiner till dammsugare!</p>
-            <a href="" class="stretched-link">Se mer</a>
-          </div>
+  </div>
+
+  <!--MAIN CONTENT OF PAGE-->
+  <!--Banner-->
+  <div class="jumbotron">
+    <h1 class="display-4">Hitta det du vill ha</h1>
+    <p class="lead">Allt inom hushåll hittar du här</p>
+    <p>Allt från damsugare och tvättmaskiner till lagring och rengöring</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>
+
+  <!--Cards about Pruducts, Services and Warranty-->
+  <div class="card mb-3" style="max-width: 45vw;">
+    <div class="row no-gutters">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Produkter</h5>
+          <p class="card-text">Hos oss finner du alla möjliga trevliga saker. Allt från diskmaskiner till dammsugare!
+          </p>
+          <a href="" class="stretched-link">Se mer</a>
         </div>
       </div>
     </div>
+  </div>
+  <div class="card mb-3" style="max-width: 45vw;">
+    <div class="row no-gutters">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Tjänster</h5>
+          <p class="card-text">Hos oss finner du alla möjliga trevliga saker. Allt från diskmaskiner till dammsugare!
+          </p>
+          <a href="" class="stretched-link">Se mer</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!--CAROUSEL-->
-      <!--SITE FOOTER-->
-    <div includeHTML="./footer.html"></div>
+  <!--CAROUSEL-->
+  <!--SITE FOOTER-->
+  <div includeHTML="./footer.html"></div>
 </body>
 
 </html>
