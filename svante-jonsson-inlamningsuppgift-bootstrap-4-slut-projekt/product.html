@@ -29,69 +29,73 @@
     <div includeHTML="./header.html"></div>
 
     <!--MAIN CONTENT OF PAGE-->
-    <div class="row">
-        <!--Carousel-->
-        <div id="carousel" class="carousel slide col-8" data-ride="carousel">
-            <!--Slide indicators-->
-            <ul class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
-            </ul>
-            <!--Images in slideshow-->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./images/banner.jpg" class="d-block w-100">
+    <div class="d-flex justify-content-center align-middle" style="height: 88vh;">
+        <div class="row">
+            <!--Carousel-->
+            <div id="carousel" class="carousel slide col-sm" data-ride="carousel">
+                <!--Slide indicators-->
+                <ul class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ul>
+                <!--Images in slideshow-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active  w-100">
+                        <img src="./images/black-shirt-front.jpg" class="d-block mx-auto">
+                    </div>
+                    <div class="carousel-item  w-100">
+                        <img src="./images/black-shirt-side.jpg" class="d-block mx-auto">
+                    </div>
+                    <div class="carousel-item w-100">
+                        <img src="./images/black-shirt-back.jpg" class="d-block mx-auto">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="./images/banner.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/banner.jpg" class="d-block w-100">
-                </div>
+                <!--Left/Right Buttons-->
+                <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                    <img src="./bs4/open-iconic-master/svg/arrow-circle-left.svg" class="w-25">
+                </a>
+                <a class="carousel-control-next" href="#carousel" data-slide="next">
+                    <!--span class="oi" data-glyph="arrow-circle-left"></span-->
+                    <img src="./bs4/open-iconic-master/svg/arrow-circle-right.svg" class="w-25">
+                </a>
             </div>
-            <!--Left/Right Buttons-->
-            <a class="carousel-control-prev" href="#carousel" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#carousel" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-        <!--Product Info-->
-        <div class="container col-4 d-flex justify-content-center">
-            <div class="card">
-                <!--Product Title-->
-                <h1 class="card-title m-3">SUSO Black T-Sirt</h1>
-                <!--Product Info-->
-                <div class="card-body">
-                    <p class="card-text m-3"> 
-                        En stilren svart T-tröja från vårat egna märke SUSO Design.<br>100% Organiskt Bomull
-                    </p>
-                    <!--Sizes-->
-                    <ul class="d-flex justify-content-center m-3">
-                        <li class="list-inline-item">
-                            <a href="" class="btn btn-primary m-3">XS</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="" class="btn btn-primary m-3">S</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="" class="btn btn-secondary m-3">M</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="" class="btn btn-primary m-3">L</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="" class="btn btn-primary m-3">XL</a>
-                        </li>
-                    </ul>
-                    <!--Add to cart-->
-                    <a href="#" class="btn btn-primary btn-block m-3">Lägg i kundvagnen</a>
+            <!--Product Info-->
+            <div class="container col-sm d-flex justify-content-center align-middle">
+                <div class="card w-100 h-100">
+                    <!--Product Title-->
+                    <h1 class="card-title m-t-5">SUSO Black T-Sirt</h1>
+                    <!--Product Info-->
+                    <div class="card-body">
+                        <p class="card-text m-3"> 
+                            En stilren svart T-tröja från vårat egna märke SUSO Design.<br>100% Organiskt Bomull
+                        </p>
+                        <!--Sizes-->
+                        <ul class="d-flex justify-content-center m-3">
+                            <li class="list-inline-item">
+                                <a href="" class="btn btn-primary m-3">XS</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" class="btn btn-primary m-3">S</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" class="btn btn-secondary m-3">M</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" class="btn btn-primary m-3">L</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" class="btn btn-primary m-3">XL</a>
+                            </li>
+                        </ul>
+                        <!--Add to cart-->
+                        <a href="#" class="btn btn-primary btn-block m-3">Lägg i kundvagnen</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <!--FOOTER-->
     <div includeHTML="./footer.html"></div>
