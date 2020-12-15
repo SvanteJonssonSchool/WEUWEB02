@@ -28,7 +28,64 @@
     <!--HEADER-->
     <div includeHTML="./header.html"></div>
     <!--MAIN CONTENT OF PAGE-->
-    
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <!--FORM-->
+            <form action="" class="form w-100 mt-5">
+                <!--Title-->
+                <h1 class="title text-center p-3">
+                    Skicka ett meddelande direkt till oss!
+                </h1>
+                <!--Mail adress-->
+                <div class="mb-3">
+                    <labelclass="form-label">E-mailadress</label>
+                    <input type="email" class="form-control">
+                  </div>
+                  <!--The message-->
+                  <div class="mb-3">
+                    <label class="form-label">Ditt meddelande</label>
+                    <textarea class="form-control" rows="5"></textarea>
+                  </div>
+                  <!--Submit button-->
+                  <button type="submit" class="btn btn-primary">Skicka</button>
+            </form>
+            <!--TABLE-->
+            <div class="table-container w-100 mt-5 mb-5">
+                <!--Table title-->
+                <h1 class="title text-center p-3">
+                    Eller kontakta oss via sociala medier
+                </h1>
+                <table class="table">
+                    <!--Column titles-->
+                    <thead>
+                      <tr>
+                        <th scope="col">Position</th>
+                        <th scope="col">Namn</th>
+                        <th scope="col">Twitter</th>
+                      </tr>
+                    </thead>
+                    <!--Column text-->
+                    <tbody>
+                      <tr>
+                        <th scope="row">VD</th>
+                        <td>Svante Jonsson</td>
+                        <td>@svanteCoolDude</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Städare</th>
+                        <td>Sven Gustaffson</td>
+                        <td>@sadSven123</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Designer</th>
+                        <td>Lavar Ball</td>
+                        <td>@Lavarbigballer</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
 
     <!--FOOTER-->
     <div includeHTML="./footer.html"></div>
