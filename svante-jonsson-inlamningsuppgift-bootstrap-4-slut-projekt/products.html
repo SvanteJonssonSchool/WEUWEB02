@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--SITE INFO-->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SUSO</title>
-        <link rel="icon" href="https://uploads.marksism.space/image/6d1d957424e6e13d4762636bc1b1a503.png">
-        <!-- IMPORT OF BOOTSTRAP 4 -->
-        <link rel="stylesheet" href="./bs4/css/bootstrap.css">
-        <script src="./js/JQuery.js"></script>
-        <script src="./bs4/js/bootstrap.js"></script>
-    
-        <!-- IMPORT OF MY CSS/JS -->
-        <link rel="stylesheet" href="./css/style.css">
-        <script src="./js/myFunctions.js"></script>
-    
-        <script>
-            window.onload = function () {
-                includeHTML();
-                showModal();
-            }
-        </script>
-    </head>
-<body>
-    
-</body>
+  <head>
+    <!--SITE INFO-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUSO</title>
+    <link
+      rel="icon"
+      href="https://uploads.marksism.space/image/6d1d957424e6e13d4762636bc1b1a503.png"
+    />
+    <!-- IMPORT OF BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="./bs4/css/bootstrap.css" />
+    <script src="./js/JQuery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="./bs4/js/bootstrap.js"></script>
+
+    <!-- IMPORT OF MY CSS/JS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/myFunctions.js"></script>
+
+    <script>
+      window.onload = function () {
+        includeHTML();
+        showModal();
+      };
+    </script>
+  </head>
+  <body>
+    <!--HEADER-->
+    <div includeHTML="./header.html"></div>
+
+    <!--MAIN CONTENT OF PAGE-->
+    <div class="row">
+      <!--Filter button-->
+      <div class="dropdown p-5">
+        <!--Dropdown button-->
+        <button type="button" class="btn d-flex justify-content-center p-4 filter-button bg-dark" data-toggle="dropdown"></button>
+        <!--Filter options-->
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">T-Shirts</a>
+          <a class="dropdown-item" href="#">Longsleeve</a>
+          <a class="dropdown-item" href="#">Byxor</a>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+    <div includeHTML="./footer.html"></div>
+  </body>
 </html>

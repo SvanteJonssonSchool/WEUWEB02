@@ -26,3 +26,9 @@ footer{
 .lh-lg{
     line-height: 1.75rem;
 }
+.filter-button{
+    background-image: url("../bs4/open-iconic-master/svg/menu.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
