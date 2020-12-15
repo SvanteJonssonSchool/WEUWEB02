@@ -1,112 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!--SITE INFO-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUSO</title>
+    <link
+      rel="icon"
+      href="https://uploads.marksism.space/image/6d1d957424e6e13d4762636bc1b1a503.png"
+    />
+    <!-- IMPORT OF BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="./bs4/css/bootstrap.css" />
+    <script src="./js/JQuery.js"></script>
+    <script src="./bs4/js/bootstrap.js"></script>
 
-<head>
-  <!--SITE INFO-->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SUSO</title>
-  <link rel="icon" href="https://uploads.marksism.space/image/6d1d957424e6e13d4762636bc1b1a503.png">
-  <!-- IMPORT OF BOOTSTRAP 4 -->
-  <link rel="stylesheet" href="./bs4/css/bootstrap.css">
-  <script src="./js/JQuery.js"></script>
-  <script src="./bs4/js/bootstrap.js"></script>
+    <!-- IMPORT OF MY CSS/JS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/myFunctions.js"></script>
 
-  <!-- IMPORT OF MY CSS/JS -->
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/myFunctions.js"></script>
+    <script>
+      window.onload = function () {
+        includeHTML();
+        showModal();
+      };
+    </script>
+  </head>
 
-  <script>
-    window.onload = function () {
-      includeHTML();
-      showModal();
-    }
-  </script>
-</head>
+  <body>
+    <!--HEADER/NAVBAR-->
+    <div includeHTML="./header.html"></div>
 
-<body>
-  <!--HEADER/NAVBAR-->
-  <div includeHTML="./header.html"></div>
-
-  <!--MODAL ABOUT COOKIES-->
-  <div id="myModal" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <!--MODAL HEADER-->
-        <div class="modal-header">
-          <h5 class="modal-title">Välkommen till SUSO!</h5>
+    <!--MODAL ABOUT COOKIES-->
+    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--MODAL HEADER-->
+          <div class="modal-header">
+            <h5 class="modal-title">Välkommen till SUSO!</h5>
+          </div>
+          <!--MODAL TEXT-->
+          <div class="modal-body">
+            <p>Här används kakor! Är du okej med det?</p>
+          </div>
+          <!--MODAL BUTTONS-->
+          <div class="modal-footer">
+            <a
+              href="https://www.pts.se/sv/privat/internet/integritet/kakor-cookies/"
+              class="badge badge-light"
+              >Vad är kakor?</a
+            >
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Acceptera
+            </button>
+          </div>
         </div>
-        <!--MODAL TEXT-->
-        <div class="modal-body">
-          <p>Här används kakor! Är du okej med det?</p>
+      </div>
+    </div>
+
+    <!--MAIN CONTENT OF PAGE-->
+    <!--Banner-->
+    <div class="jumbotron d-flex align-items-center flex-column">
+      <h1 class="display-4">Detta är SUSO</h1>
+      <p class="lead">SUSO DESIGN och 1000+ märken</p>
+      <p class="lead d-flex justify-content-center flex-wrap">
+        <a
+          class="btn btn-primary btn-lg m-1"
+          href="./products.html"
+          role="button"
+          >Börja handla som man</a
+        >
+        <a
+          class="btn btn-primary btn-lg m-1"
+          href="./products.html"
+          role="button"
+          >Börja handla som kvinna</a
+        >
+      </p>
+    </div>
+
+    <!--Cards about Pruducts, Services and Warranty-->
+    <div class="row d-flex justify-content-around">
+      <!--Card-->
+      <div class="card col-lg-3 shadow pl-0 pr-0 info-card">
+        <!--Card img-->
+        <div class="card-img-top info-card-img suso-d-img"></div>
+        <!--Card body-->
+        <div class="card-body">
+          <p class="card-title font-weight-bold">SUSO Design</p>
+          <p class="card-text lh-lg">
+            SUSO Design är våra egna kläder som vi special gjort just för dig.
+            Med våra kläder kommer du uppnå en ny nivå av självförtoende du
+            aldrig tidigare skådat. Våra kläder är helt klart dem bästa, no
+            question! Alla tyger vi använder till SUSO Design är från organisk
+            och/eller återvunnet material så du kan flexa hur miljömedveten du
+            är samtidigt som du är snyggast i stan, som det borde vara. This is
+            the SUSO way
+          </p>
+          <a href="#" class="stretched-link">Läs mer</a>
         </div>
-        <!--MODAL BUTTONS-->
-        <div class="modal-footer">
-          <a href="https://www.pts.se/sv/privat/internet/integritet/kakor-cookies/" class="badge badge-light">Vad är
-            kakor?</a>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Acceptera</button>
+      </div>
+      <!--Card-->
+      <div class="card col-lg-3 shadow pl-0 pr-0 info-card">
+        <!--Card img-->
+        <div class="card-img-top info-card-img our-products-img"></div>
+        <!--Card body-->
+        <div class="card-body">
+          <p class="card-title font-weight-bold">Våra produkter</p>
+          <p class="card-text lh-lg">
+            SUSO Design är våra egna kläder som vi special gjort just för dig.
+            Med våra kläder kommer du uppnå en ny nivå av självförtoende du
+            aldrig tidigare skådat. Våra kläder är helt klart dem bästa, no
+            question! Alla tyger vi använder till SUSO Design är från organisk
+            och/eller återvunnet material så du kan flexa hur miljömedveten du
+            är samtidigt som du är snyggast i stan, som det borde vara. This is
+            the SUSO way
+          </p>
+          <a href="#" class="stretched-link">Läs mer</a>
+        </div>
+      </div>
+      <!--Card-->
+      <div class="card col-lg-3 shadow pl-0 pr-0 info-card">
+        <!--Card img-->
+        <div class="card-img-top info-card-img shipping-img"></div>
+        <!--Card body-->
+        <div class="card-body">
+          <p class="card-title font-weight-bold">Leverans & Retur</p>
+          <p class="card-text lh-lg">
+            SUSO Design är våra egna kläder som vi special gjort just för dig.
+            Med våra kläder kommer du uppnå en ny nivå av självförtoende du
+            aldrig tidigare skådat. Våra kläder är helt klart dem bästa, no
+            question! Alla tyger vi använder till SUSO Design är från organisk
+            och/eller återvunnet material så du kan flexa hur miljömedveten du
+            är samtidigt som du är snyggast i stan, som det borde vara. This is
+            the SUSO way
+          </p>
+          <a href="#" class="stretched-link">Läs mer</a>
         </div>
       </div>
     </div>
-  </div>
 
-  <!--MAIN CONTENT OF PAGE-->
-  <!--Banner-->
-  <div class="jumbotron d-flex align-items-center flex-column">
-    <h1 class="display-4">Detta är SUSO</h1>
-    <p class="lead">SUSO DESIGN och 1000+ märken</p>
-    <p class="lead d-flex justify-content-center flex-wrap">
-      <a class="btn btn-primary btn-lg m-1" href="./products.html" role="button">Börja handla som man</a>
-      <a class="btn btn-primary btn-lg m-1" href="./products.html" role="button">Börja handla som kvinna</a>
-    </p>
-  </div>
-
-  <!--Cards about Pruducts, Services and Warranty-->
-  <div class="row d-flex justify-content-around">
-    <div class="card col-lg-3 shadow">
-      <!--Card img-->
-      <img class="card-img-top" src="images/banner.jpg">
-      <!--Card body-->
-      <div class="card-body">
-        <!--Card title, text & link-->
-        <p class="card-title font-weight-bold">SUSO DESIGN</p>
-        <p class="card-text lh-lg">SUSO Design är våra egna kläder som vi special gjort just för dig. Med våra kläder kommer
-          du uppnå en ny nivå av självförtoende du aldrig tidigare skådat. Våra kläder är helt klart dem bästa, no
-          question! Alla tyger vi använder till SUSO Design är från organisk och/eller återvunnet material så du kan flexa
-          hur miljömedveten du är samtidigt som du är snyggast i stan, som det borde vara. This is the SUSO way</p>
-        <a href="#" class="stretched-link">Lite text</a>
-      </div>
-    </div>
-    <div class="card col-lg-3 shadow">
-      <img class="card-img-top" src="images/banner.jpg">
-      <div class="card-body">
-        <p class="card-title font-weight-bold">Våra produkter</p>
-        <p class="card-text lh-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-        <a href="#" class="stretched-link">Lite text</a>
-      </div>
-    </div>
-    <div class="card col-lg-3 shadow">
-      <img class="card-img-top" src="images/banner.jpg">
-      <div class="card-body">
-        <p class="card-title font-weight-bold">Leverans & retur</p>
-        <p class="card-text lh-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-        <a href="#" class="stretched-link">Lite text</a>
-      </div>
-    </div>
-  </div>
-
-  <!--SITE FOOTER-->
-  <div includeHTML="./footer.html"></div>
-</body>
-
+    <!--SITE FOOTER-->
+    <div includeHTML="./footer.html"></div>
+  </body>
 </html>

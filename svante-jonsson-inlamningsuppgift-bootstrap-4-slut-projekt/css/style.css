@@ -1,34 +1,52 @@
-.navbar{
-    height: 6vh;
+.navbar {
+  height: 6vh;
 }
-footer{
-    height: 6vh;
+footer {
+  height: 6vh;
 }
-.modal{
-    top: 25%;
+.modal {
+  top: 25%;
 }
-.modal-body > p{
-    margin: auto;
+.modal-body > p {
+  margin: auto;
 }
-.jumbotron{
-    color: white;
-    background-color: rgba(0,0,0,0.2);
-    background-image: url('../images/banner.png');
-    background-repeat: no-repeat;
-    background-position: 55% 20%;
-    background-size: cover;
-    border-radius: 0;
+.jumbotron {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("../images/homeBannerDark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0;
 }
-.row{
-    width: 100%;
-    margin-bottom: 2rem;
+.row {
+  width: 100%;
+  margin-bottom: 2rem;
 }
-.lh-lg{
-    line-height: 1.75rem;
+.filter-button {
+  background-image: url("../bs4/open-iconic-master/svg/menu.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
 }
-.filter-button{
-    background-image: url("../bs4/open-iconic-master/svg/menu.svg");
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: center;
+.info-card-img {
+  height: 40%;
+  background-image: url("../images/SUSODesign.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.info-card-body{
+    height: 60%;
+}
+.info-card{
+    height: 55vh;
+}
+.suso-d-img{
+    background-image: url("../images/SUSODesign.jpg");
+}
+.our-products-img{
+    background-image: url("../images/ourProducts.jpeg");
+}
+.shipping-img{
+    background-image: url("../images/shipping.jpg");
 }
